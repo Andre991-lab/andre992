@@ -1,0 +1,159 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      background-color: black;
+      font-family: Arial, sans-serif;
+    }
+
+    #video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    #semSinal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px 50px;
+      border-radius: 12px;
+      display: none;
+      z-index: 5;
+    }
+
+    .botao {
+      width: 70px;
+      height: 70px;
+      font-size: 30px;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background-color: rgba(0, 123, 255, 0.8);
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 10px #000;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .botao:active,
+    .botao.ativa {
+      background-color: rgba(255, 255, 255, 0.7);
+      color: black;
+    }
+
+    .botao-foto {
+      background-color: #FFC107;
+      color: white;
+    }
+
+    .botao-gravar {
+      background-color: white;
+      color: red;
+      border: 3px solid red;
+    }
+
+    .botao-gravar.ativo {
+      background-color: red;
+      color: white;
+    }
+
+    .botoes-centro {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      z-index: 2;
+    }
+
+    .botoes-esquerda {
+      position: absolute;
+      bottom: 80px;
+      left: 130px;
+      display: flex;
+      gap: 20px;
+      z-index: 2;
+    }
+
+    .botoes-direita {
+      position: absolute;
+      bottom: 80px;
+      right: 130px;
+      display: flex;
+      gap: 20px;
+      z-index: 2;
+    }
+
+    .marcha {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 2;
+    }
+
+    .marcha button {
+      width: 60px;
+      height: 50px;
+      font-size: 22px;
+      border-radius: 12px;
+      border: none;
+      color: white;
+      background-color: rgba(23, 162, 184, 0.85);
+      box-shadow: 0 0 5px #000;
+      transition: background-color 0.2s;
+    }
+
+    .marcha button.ativo {
+      background-color: #007bff;
+    }
+
+    #velocidade {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      z-index: 2;
+    }
+
+    #temporizador {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: red;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 2;
+      display: none;
+    }
+
+    #wifi {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      font-size: 22px;
+      z-index: 2;
+    }
+    

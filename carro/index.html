@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Controle ESP32-CAM</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Câmera ao vivo -->
+  <img id="video" src="http://192.168.4.1/cam" onerror="document.getElementById('semSinal').style.display='block'" onload="document.getElementById('semSinal').style.display='none'" />
+
+  <!-- Alerta sem sinal -->
+  <img id="video" src="http://192.168.4.1/cam">
+<div id="semSinal" style="display:none; color:red;">Sem sinal da câmera</div>
+
+
+  <!-- Informações de velocidade e Wi-Fi -->
+  <div id="wifi"><i class="fas fa-wifi"></i></div>
+  <div id="velocidade">0 km/h</div>
+  <div id="temporizador">00:00</div>
+
+  <!-- Botões de controle -->
+  <div class="botoes-centro">
+    <button id="foto" class="botao botao-foto" onclick="enviar('foto')"><i class="fas fa-camera"></i></button>
+    <button id="gravar" class="botao botao-gravar" onclick="alternarGravacao()">⏺</button>
+  </div>
+
+  <div class="botoes-esquerda">
+    <button id="esquerda" class="botao">←</button>
+    <button id="direita" class="botao">→</button>
+  </div>
+
+  <div class="botoes-direita">
+    <button id="frente" class="botao">▲</button>
+    <button id="tras" class="botao">▼</button>
+  </div>
+
+  <div class="marcha">
+    <button id="modoP" onclick="alternarMarcha('P')">P</button>
+    <button id="modoN" onclick="alternarMarcha('N')">N</button>
+    <button id="modoR" onclick="alternarMarcha('R')">R</button>
+  </div>
+
+  <!-- Inclusão do JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
